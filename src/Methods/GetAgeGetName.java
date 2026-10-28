@@ -1,16 +1,18 @@
+// Question: How can methods read and return a user’s name and age?
 package Methods;
 
 import java.util.Scanner;
 
 // method that get the age and name of a user
 public class GetAgeGetName {
-    static void main(String[] args) {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         System.out.print("Enter your name: ");
-        System.out.println(getName());
+        System.out.println(getName(input));
 
 
         System.out.print("Enter your age: ");
-        System.out.println(getAge());
+        System.out.println(getAge(input));
     }
 
 
@@ -30,11 +32,11 @@ public class GetAgeGetName {
 //        return age;
 //    }
 
-    static String getName() {
-        return new Scanner(System.in).nextLine();
+    static String getName(Scanner input) {
+        return input.nextLine();
     }
 
-    static int getAge() {
-        return new Scanner(System.in).nextInt();
+    static int getAge(Scanner input) {
+        return input.nextInt();
     }
 }
